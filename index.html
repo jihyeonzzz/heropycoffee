@@ -32,6 +32,9 @@
   <!-- 메인콘텐츠 -->
   <link href="./css/main.css" rel="stylesheet" type="text/css">
 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+
+
   <!-- 프리픽스 -->
   <script src="./script/prefixfree.min.js"></script>
   <!-- 부드러운 애니메이션 스크립트 소스 -->
@@ -360,8 +363,68 @@
         </div>
       </div>
     </section>
-    <section class="notice"><h2>제목</h2></section>
-    <section class="banner"><h2>제목</h2></section>
+
+    <!-- 공지사항 -->
+    <section class="notice">
+      <div class="n_inner">
+        <div class="n_inner__left">
+          <h2>공지사항</h2>
+          <div class="swiper s_notice">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><a href="javascript:void(0)" title="">크리스마스 & 연밀얀시 매장 영엽시간 변경 안내</a></div>
+              <div class="swiper-slide"><a href="javascript:void(0)" title="">[당첨자 발표] 커피 영수증 이벤트</a></div>
+              <div class="swiper-slide"><a href="javascript:void(0)" title="">애플리케이션 버전 업데이트 안내</a></div>
+              <div class="swiper-slide"><a href="javascript:void(0)" title="">[당첨자 발표] 전자영수증 이벤트</a></div>
+            </div>
+          </div>
+          <i class="material-icons">add_circle</i>
+        </div>
+        <div class="n_inner__right">
+          <h2>커피 프로모션</h2>
+          <i class="material-icons">file_upload</i>
+        </div>
+      </div>
+    </section>
+
+    <!-- 프로모션 -->
+    <section class="promotion">
+      <h2>프로모션</h2>
+      <div class="swiper proSlide">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="./images/promotion_slide1.jpg" alt="">
+            <a href="javascript:void(0)" title="프로모션1" class="btn">자세히 보기</a>
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/promotion_slide2.jpg" alt="">
+            <a href="javascript:void(0)" title="프로모션1" class="btn">자세히 보기</a>
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/promotion_slide3.jpg" alt="">
+            <a href="javascript:void(0)" title="프로모션1" class="btn">자세히 보기</a>
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/promotion_slide4.jpg" alt="">
+            <a href="javascript:void(0)" title="프로모션1" class="btn">자세히 보기</a>
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/promotion_slide5.jpg" alt="">
+            <a href="javascript:void(0)" title="프로모션1" class="btn">자세히 보기</a>
+          </div>
+        </div>
+
+        <div class="swiper-pagination"></div>
+
+        <div class="swiper-button-prev">
+          <span class="material-icons">arrow_back</span>
+        </div>
+        
+        <div class="swiper-button-next">
+          <span class="material-icons">arrow_forward</span>
+        </div>
+      </div>
+    </section>
+
     <section class="brand"><h2>제목</h2></section>
     <section class="con01"><h2>제목</h2></section>
     <section class="con02"><h2>제목</h2></section>
@@ -381,6 +444,35 @@
 
   <!-- 푸터영역 -->
   <footer></footer>
+  
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".s_notice", {
+      direction: "vertical",
+      autoplay: true,
+      loop: true,
+    });
+
+    var swiper = new Swiper(".proSlide", { //객체 생성
+      slidesPerView: 3,
+        spaceBetween: 10,
+        loop: true,           //반복회전
+        centeredSlides: true, //1번 슬라이드가 중앙에 배치
+        pagination: {
+          el: ".swiper-pagination", //콘트롤버튼 나오게
+          clickable: true,          //콘트롤버튼 클릭할 수 있음
+        },
+      autoplay: true,        //자동으로 움직임
+      navigation: {          //좌, 우버튼 만들기
+        nextEl: ".promotion .swiper-button-next",
+        prevEl: ".promotion .swiper-button-prev",
+      },
+    });
+  </script>
   
 </body>
 </html>
