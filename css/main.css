@@ -33,18 +33,26 @@ main{padding-top: 120px;}
 .cup2_txt{top: 186px; right: 412px;}
 .spoon{bottom:0px; left: 275px;}
 
-.detail_btn{
-  width: 130px;
+.btn{
+  width: 100px;
   padding: 10px;
-  border: 2px solid #592b18;
   font-size: 16px;
   font-weight: 700;
   text-align: center;
   display: block;
   transition: 0.4s;
+  border-radius: 4px;
+  border: 2px solid #333;
+  color: #333;
+}
+.btn:hover{
+  color: #fff;
+  background: #333;
+}
+.detail_btn{
+  border: 2px solid #592b18;
   color: #592b18;
   transform: translateX(130px);
-  border-radius: 3px;
 }
 .detail_btn:hover{
   color: #fff;
@@ -135,11 +143,18 @@ main{padding-top: 120px;}
   position: relative;
   overflow: hidden;
   position: relative;
+  height: 663px;
+  transition: 0.4s;
 }
+/* 버튼 클릭시 프로모션박스에 적용할 서식 */
+.hide{
+  height: 0px !important;
+}
+
 .promotion h2{display: none;}
 .proSlide{
   widtH: calc(819px * 3 + 10px * 2); /*2477*/ /*띄어쓰기 주의*/
-  height: 663px;
+  height: 653px;
   flex-shrink: 0;
   position: relative;
 }
@@ -151,23 +166,10 @@ main{padding-top: 120px;}
 }
 .proSlide .swiper-slide-active{opacity: 1;}
 
-.proSlide .swiper-slide .btn{
+.swiper-slide .btn{
   position: absolute;
   bottom: 120px; left: 0px; right: 0;
   margin: 0px auto;
-  width: 130px;
-  padding: 10px;
-  border: 2px solid #333;
-  font-size: 16px;
-  font-weight: 700;
-  display: block;
-  transition: 0.4s;
-  color: #333;
-  border-radius: 3px;
-}
-.proSlide .swiper-slide .btn:hover{
-  color: #fff;
-  background: #333;
 }
 
 .swiper-pagination{
@@ -208,3 +210,207 @@ main{padding-top: 120px;}
   color: #fff;
 }
 .swiper-button-prev::after, .swiper-button-next::after{display: none;}
+
+/* 리워드 서식 */
+.reward{
+  height: 241px;
+  background: rgb(39,39,39);
+  background: linear-gradient(90deg, rgba(39,39,39,1) 50%, rgba(213,199,152,1) 50%);
+}
+.reward_inner{
+  background-image: url('../images/rewards.jpg');
+  height: 241px; width: 1100px;
+  margin: 0px auto;
+  position: relative;
+}
+.btn_group{
+  position: absolute;
+  right: 0px; bottom: 30px;
+  width: 300px;
+}
+.gift{width: 238px;}
+.btn_join, .btn_login{
+  display: inline-block !important;
+  margin-bottom: 10px;
+}
+.btn_join{
+  margin-right: 10px;
+  color: #fff;
+  background: #333;
+}
+.btn_join:hover{
+  color: #333;
+  background: none;
+}
+
+/* 영상콘텐츠 서식 */
+.movie{
+  width: 100%; height: 700px;
+  background: #222;
+  position: relative;
+}
+.movie h2{display: none;}
+.movie .m_inner{
+  width: 1100px; height: 700px;
+  margin: 0px auto;
+  position: relative;
+  z-index: 12;
+}
+.movie .m_inner img{position: absolute;}
+.m_img1{
+  left: -60px; top: 30px;
+  animation: ani1 infinite 3s;
+}
+.m_img2{
+  left: 90px; top: 330px;
+  animation: ani2 infinite 4s;
+}
+.m_img3{
+  right: 0px; bottom: -80px;
+  animation: ani3 infinite 5s;
+}
+
+@keyframes ani1{
+  0%{top: 30px;}
+  50%{top: 50px;}
+  100%{top: 30px;}
+}
+@keyframes ani2{
+  0%{top: 330px;}
+  50%{top: 350px;}
+  100%{top: 330px;}
+}
+@keyframes ani3{
+  0%{bottom: -80px;}
+  50%{bottom: -100px;}
+  100%{bottom: -80px;}
+}
+
+.youtube{
+  width: 100%; height: 700px;
+  position: absolute;
+  top: 0px; left: 0px;
+  /* background: #ff0; */
+  z-index: 10;
+  overflow: hidden;
+}
+.youtube video{
+  width: 100%;
+  transform: translateY(-40px);
+}
+.cover{
+  background-image: url('../images/video_cover_pattern.png');
+  position: absolute;
+  top: 0px; left: 0px;
+  width: 100%; height: 100%;
+  z-index: 11;
+}
+
+/* 아이스커피 블렌드 */
+.season-product{
+  background: url('../images/season_product_bg.jpg');
+  height: 400px;
+}
+.season-product h2, .reserve-coffee h2, .pick-your-favorite h2, .reserve-store h2{display: none;}
+.inner{
+  width: 1100px;
+  margin: 0px auto;
+  position: relative;
+}
+.season-product .coffee01{
+  position: absolute;
+}
+.season-product .txt_group{
+  position: absolute;
+  top: 110px; right: 100px;
+  width: 480px;
+}
+.season-product .c_title{
+  margin-bottom: 10px;
+}
+.season-product .description{
+  margin-bottom: 15px;
+}
+
+/* 리저브 커피 */
+.reserve-coffee{
+  background: url('../images/reserve_bg.jpg');
+  height: 400px;
+}
+.reserve-coffee .r_logo{
+  position: absolute;
+  top: 110px; left: 0px;
+}
+.reserve-coffee .txt_group{
+  position: absolute;
+  top: 124px; left: 208px;
+}
+.reserve-coffee .product{
+  position: absolute;
+  top: 0px; right: 0px;
+}
+.r_btn{color: #C1977C; border: 2px solid #C1977C;}
+.r_btn:hover{background: #C1977C;}
+
+/* 페이버릿 픽 */
+.pick-your-favorite{
+  background: url('../images/favorite_bg.jpg');
+}
+.pick-your-favorite .inner{padding: 110px 0px;}
+.pick-your-favorite .txt_group{
+  width: 362px;
+  margin-left: 100px;
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+.pick-your-favorite .f_title{
+  margin-bottom: 40px;
+}
+.pick-your-favorite .description{
+  margin-bottom: 40px;
+}
+.f_btn{color: #fff; bordeR: 2px solid #fff;}
+.f_btn:hover{color: #333; background: #fff;}
+
+/* 리저브 스토어 */
+.reserve-store{
+  background: url('../images/reserve_store_bg.jpg');
+}
+.reserve-store .inner{height: 600px;}
+
+/* 파인드 스토어 */
+.find-store{
+  background: url('../images/find_store_bg.jpg');
+}
+.find-store .inner{height: 400px;}
+.find-store .texture1{
+  position: absolute;
+  top: 0px; left: 400px;
+}
+.find-store .texture2{
+  position: absolute;
+  bottom: 0px; right: 0px;
+}
+.find-store .picture1{
+  border-radius: 50%;
+  box-shadow: 2px 2px 8px 0 rgba(0,0,0,.5);
+  position: absolute;
+  top: -60px; left: 0px;
+}
+.find-store .picture2{
+  border-radius: 50%;
+  box-shadow: 2px 2px 8px 0 rgba(0,0,0,.5);
+  position: absolute;
+  top: 150px; left: 250px;
+}
+.find-store .txt_group{
+  position :absolute;
+  top: 120px; left: 550px;
+}
+.find-store .s_title{
+  margin-bottom: 20px;
+}
+.find-store .description{
+  margin-bottom: 20px;
+}

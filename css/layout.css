@@ -77,8 +77,6 @@ header .inner h1{padding-top: 20px;}
 .gnb > ul{
   display: flex;
 }
-.gnb > ul > li{
-}
 .gnb > ul > li > a{
   text-transform: uppercase;
   font-size: 15px;
@@ -173,10 +171,10 @@ main{background: #ccc;}
   height: 400px;
   background: #ccc;
 }
-.con03{
+/* .con03{
   height: 400px;
   background: #333;
-}
+} */
 .con04{
   height: 700px;
   background: #a2a2a2;
