@@ -1,11 +1,11 @@
 // 292.p
 const badgeEl = document.querySelector('.badges');
-const topBtnEl = document.querySelector('.top_btn');
+const topBtnEl = document.querySelector('#top_btn');
 
 topBtnEl.addEventListener('click', function(){
   // alert('eiownviowne');
   gsap.to(window, .6, { //브라우저를 선택하여 0.6초만에
-    scrollTop:0 //스크롤 꼭때기 0까지 올라간다.
+    scrollTo: 0 //스크롤 꼭때기 0까지 올라간다.
   });
 });
 
