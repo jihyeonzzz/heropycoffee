@@ -312,7 +312,7 @@ main{padding-top: 120px; overflow-x: hidden;}
   background: url('../images/season_product_bg.jpg');
   height: 400px;
 }
-.reward h2, .season-product h2, .reserve-coffee h2, .pick-your-favorite h2, .reserve-store h2, .awards h2{display: none;}
+.reward h2, .season-product h2, .reserve-coffee h2, .pick-your-favorite h2, .reserve-store h2, .awards h2, .find-store h2{display: none;}
 .inner{
   width: 1100px;
   margin: 0px auto;
