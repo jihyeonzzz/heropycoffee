@@ -1,16 +1,17 @@
 @charset "utf-8";
 
-main{padding-top: 120px;}
+main{padding-top: 120px; overflow-x: hidden;}
 
 .badges{
   width: 130px;
   position:fixed;
-  right: 5px; top: 125px;
+  right: 15px; top: 125px;
   z-index: 90;
 }
 .badges img{
   border-radius: 10px;
   box-shadow: 4px 4px 10px rgba(0,0,0,0.2);
+  margin: 5px;
 }
 
 /* 비주얼 영역 서식 */
@@ -271,19 +272,19 @@ main{padding-top: 120px;}
 }
 
 @keyframes ani1{
-  0%{top: 30px;}
-  50%{top: 50px;}
-  100%{top: 30px;}
+  0%{transform: translateY(0);}
+  50%{transform: translateY(-20px);}
+  100%{transform: translateY(0);}
 }
 @keyframes ani2{
-  0%{top: 330px;}
-  50%{top: 350px;}
-  100%{top: 330px;}
+  0%{transform: translateY(0);}
+  50%{transform: translateY(-20px);}
+  100%{transform: translateY(0);}
 }
 @keyframes ani3{
-  0%{bottom: -80px;}
-  50%{bottom: -100px;}
-  100%{bottom: -80px;}
+  0%{transform: translateY(0);}
+  50%{transform: translateY(20px);}
+  100%{transform: translateY(0);}
 }
 
 .youtube{
@@ -355,6 +356,10 @@ main{padding-top: 120px;}
 /* 페이버릿 픽 */
 .pick-your-favorite{
   background: url('../images/favorite_bg.jpg');
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 .pick-your-favorite .inner{padding: 110px 0px;}
 .pick-your-favorite .txt_group{
@@ -376,8 +381,41 @@ main{padding-top: 120px;}
 /* 리저브 스토어 */
 .reserve-store{
   background: url('../images/reserve_store_bg.jpg');
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
-.reserve-store .inner{height: 600px;}
+.reserve-store .inner{
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.reserve-store .medal{
+  width: 334px; height: 334px;
+}
+.reserve-store .medal .front{
+  position: absolute;
+  transition: 1s;
+}
+.reserve-store .medal .back{
+  position: absolute;
+  transition: 1s;
+  transform: rotateY(-180deg);
+  backface-visibility: hidden;
+}
+.reserve-store .medal:hover .front{
+  transform: rotateY(180deg);
+}
+.reserve-store .medal:hover .back{
+  transform: rotateY(0deg);
+}
+.reserve-store .medal .back .btn{
+  position: absolute;
+  top: 240px; left: 0px; right: 0px;
+  margin: 0px auto;
+}
 
 /* 파인드 스토어 */
 .find-store{
@@ -414,3 +452,23 @@ main{padding-top: 120px;}
 .find-store .description{
   margin-bottom: 20px;
 }
+
+
+/* 화면 스크롤 동작시 움직이는 서식 show */
+.back-to-position{
+  opacity: 0;
+  transition-duration: 1s;
+}
+.back-to-position.to-left{
+  transform: translateX(-150px);
+}
+.back-to-position.to-right{
+  transform: translateX(150px);
+}
+.show .back-to-position{
+  opacity: 1;
+  transform: translateX(0);
+}
+.show .back-to-position.delay-1{transition-delay: .3s;}
+.show .back-to-position.delay-2{transition-delay: .6s;}
+.show .back-to-position.delay-3{transition-delay: .9s;}
