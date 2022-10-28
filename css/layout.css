@@ -52,7 +52,7 @@ header .inner h1{padding-top: 20px;}
   outline: none;
   background: #fff;
   color: #777;
-  transition: width 0.4s;
+  transition: 0.4s;
 }
 .search input:focus{
   width: 190px;

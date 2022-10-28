@@ -154,7 +154,7 @@ main{padding-top: 120px; overflow-x: hidden;}
 
 .promotion h2{display: none;}
 .proSlide{
-  widtH: calc(819px * 3 + 10px * 2); /*2477*/ /*띄어쓰기 주의*/
+  width: calc(819px * 3 + 10px * 2); /*2477*/ /*띄어쓰기 주의*/
   height: 653px;
   flex-shrink: 0;
   position: relative;
